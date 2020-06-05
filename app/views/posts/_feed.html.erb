@@ -22,8 +22,8 @@
             <div class="media-content">
                 <div class="content">
                   <% if member_signed_in? %>
-                    <strong><%= post.member.name %></strong><br/>
-                    <small><%= post.member.username %></small><br/>
+                    <strong><%= post.member.name if post.member %></strong><br/>
+                    <small><%= post.member.username if post.member %></small><br/>
                   <% end %>
                     <p><%= post.body %><p> 
                 </div>
